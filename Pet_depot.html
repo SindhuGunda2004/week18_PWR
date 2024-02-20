@@ -9,7 +9,11 @@
     <link href="./Pet_depot.css" rel="stylesheet" type="text/css">
     <link href="./Pet_depot.webmanifest" rel="manifest">
 </head>
-
+<script>
+    if ("serviceWorker" in navigator){
+        navigator.serviceWorker.register("service-worker.js");
+    };
+</script>
 <body>
     <div id="app">
         <header>
