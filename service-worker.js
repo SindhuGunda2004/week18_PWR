@@ -1,6 +1,6 @@
 var cacheName = "petstore-v1";
 var cacheFile = [
-    "Pet_depot.html",
+    "index.html",
     "products.js",
     "Pet_depot.css",
     "Pet_depot.webmanifest",
