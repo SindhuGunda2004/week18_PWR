@@ -11,3 +11,20 @@ var cacheFile = [
     "images/icon-store-512.png",
     "images/icon-store-32.png"
 ];
+
+// what is self 
+// what is cache
+// where is service worker actually doing installation ofncache files ans it will happen only after waituntil
+// what isn the keyword that actually helpsmto push all files  
+// what is service worker 
+// addall helps to get all files to 
+
+self.addEventListener("install", (e) => {
+    console.log('[Service Worker] Install');
+    e.waitUntil(
+        caches.open(cacheName).then((cache) => {
+            console.log('[Service Worker] Caching all the files');
+            return cache.addAll(cacheFile);
+        })
+    );
+});
