@@ -28,3 +28,13 @@ self.addEventListener("install", (e) => {
         })
     );
 });
+
+self.addEventListener('fetch', function (e) {
+    e.respondWith(
+        caches.match(e.request).then(function (r) {
+            console.log('[Service Worker] Fecthing Resource: ' + e.request.url);
+            // r is matching file if it exists in the cache 
+            return r 
+        })
+    );
+});
