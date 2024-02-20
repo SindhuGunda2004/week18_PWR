@@ -39,6 +39,8 @@ self.addEventListener("install", (e) => {
 //     );
 // });
 
+
+// sometimes manifest may act weirdly and will not give the install option in chrome that time, use mozilla firefox in phone then it will give that option
 self.addEventListener('fetch', function (e) {
     e.respondWith(
         caches.match(e.request).then(function (r) {
